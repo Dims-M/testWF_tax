@@ -17,6 +17,7 @@ namespace WP_testTask.Model
     public class UpdateApp
     {
        private string tempPathDir = @"Log\";
+
         /// <summary>
         /// Получаем текущую версию приложения
         /// </summary>
@@ -65,18 +66,22 @@ namespace WP_testTask.Model
         {
             string absolitPath = Application.StartupPath;
             string extractPath = absolitPath + @"\new\WP_testTask.exe";
+            string finalPath = absolitPath +"\\"+ @"WP_testTask.exe";
 
             try
             {
                 //File.Delete(@"C:\Program Files (x86)\KKM-Сервис\TimeUpdatesWF\TimeUpdatesWF.exe");
                 string path = Application.ExecutablePath;
 
-               // 
-
-                Process.Start("cmd.exe", "/C \"" + extractPath + "\"");  //Запуск батника для запуск обновления
+           //   Process.Start("cmd.exe", "/C \"" + extractPath + "\"");  //Запуск батника для запуск обновления
                
               Thread.Sleep(50);
               Process.Start("cmd.exe", "/c del \"" + path + "\"");  //Запуск батника
+               // xcopy C:\test\testcopy C:\test\backup / f / i / y / s
+
+             // File.Copy(extractPath, finalPath, true);
+
+                Process.Start("cmd.exe", "/C \"" + path + "\"");  //Запуск батника для запуск обновления
 
             }
             catch (Exception ex)
@@ -89,5 +94,22 @@ namespace WP_testTask.Model
         }
 
 
+        public void voidTestMedod()
+        {
+            string absolitPath = Application.StartupPath;
+            string extractPath = absolitPath + @"\new\WP_testTask1.exe";
+            string finalPath = absolitPath + "\\" + @"WP_testTask.exe";
+            string command = $"/k copy {extractPath} {absolitPath}";
+
+            Process pr = new Process();
+            pr.StartInfo.FileName = "cmd";
+            //pr.StartInfo.Arguments = @"/k copy C:\Users\Dmytriy\Source\Repos\testWF_tax\bin\Debug\new\WP_testTask1.exe C:\Users\Dmytriy\Source\Repos\testWF_tax\bin\Debug";
+            pr.StartInfo.Arguments = command;
+           // pr.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            pr.Start();
+            pr.WaitForExit();
+
+           
+        }
     }
 }
