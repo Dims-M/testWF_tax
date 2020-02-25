@@ -67,21 +67,15 @@ namespace WP_testTask.Model
             string absolitPath = Application.StartupPath;
             string extractPath = absolitPath + @"\new\WP_testTask.exe";
             string finalPath = absolitPath +"\\"+ @"WP_testTask.exe";
+            string path = Application.ExecutablePath;
+            string command = $"/k copy {extractPath} {absolitPath}";
 
             try
             {
-                //File.Delete(@"C:\Program Files (x86)\KKM-Сервис\TimeUpdatesWF\TimeUpdatesWF.exe");
-                string path = Application.ExecutablePath;
-
-           //   Process.Start("cmd.exe", "/C \"" + extractPath + "\"");  //Запуск батника для запуск обновления
-               
-              Thread.Sleep(50);
-              Process.Start("cmd.exe", "/c del \"" + path + "\"");  //Запуск батника
-               // xcopy C:\test\testcopy C:\test\backup / f / i / y / s
-
-             // File.Copy(extractPath, finalPath, true);
-
-                Process.Start("cmd.exe", "/C \"" + path + "\"");  //Запуск батника для запуск обновления
+              Process.Start("cmd.exe", "/c del \"" + path + "\"");  //Удаление рабочего, текущего exe
+              Thread.Sleep(100);
+              Process.Start("cmd.exe", command);  //Копирование файла из папки new
+              Process.Start("cmd.exe", "/C \"" + path + "\"");  //Запуск обнолвенной версии
 
             }
             catch (Exception ex)
@@ -90,6 +84,7 @@ namespace WP_testTask.Model
                 MessageBox.Show($"Ошибка при попытки удаления старого файла{ex}");
             }
            
+
             Process.GetCurrentProcess().Kill(); // закрытие текущего приложения
         }
 

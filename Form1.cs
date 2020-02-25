@@ -25,9 +25,9 @@ namespace WP_testTask
         private void button2_Click(object sender, EventArgs e)
         {
             servis = new UpdateApp();
-            // servis.StartBatDelete();
-            //  servis.DeleteApp();
-            servis.voidTestMedod();
+             servis.StartBatDelete();
+             // servis.DeleteApp();
+           // servis.voidTestMedod();
         }
 
         private void button1_Click(object sender, EventArgs e)
