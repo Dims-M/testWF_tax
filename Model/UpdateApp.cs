@@ -66,7 +66,6 @@ namespace WP_testTask.Model
             string commandCopy = $"/C copy {extractPath} {absolitPath}";
             string comandStart = $"/C start {path} /H";
            
-
             try
             {
               Process.Start("cmd.exe", "/C del \"" + path + "\"");  //Удаление рабочего, текущего exe
@@ -86,23 +85,5 @@ namespace WP_testTask.Model
             Process.GetCurrentProcess().Kill(); // закрытие текущего приложения
         }
 
-        //тестовые методы
-        public void voidTestMedod()
-        {
-            string absolitPath = Application.StartupPath;
-            string extractPath = absolitPath + @"\new\WP_testTask1.exe";
-            string finalPath = absolitPath + "\\" + @"WP_testTask.exe";
-            string command = $"/k copy {extractPath} {absolitPath}";
-
-            Process pr = new Process();
-            pr.StartInfo.FileName = "cmd";
-            //pr.StartInfo.Arguments = @"/k copy C:\Users\Dmytriy\Source\Repos\testWF_tax\bin\Debug\new\WP_testTask1.exe C:\Users\Dmytriy\Source\Repos\testWF_tax\bin\Debug";
-            pr.StartInfo.Arguments = command;
-           // pr.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            pr.Start();
-            pr.WaitForExit();
-
-           
-        }
     }
 }
