@@ -40,10 +40,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(198, 261);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(264, 321);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 40);
+            this.button1.Size = new System.Drawing.Size(179, 49);
             this.button1.TabIndex = 0;
             this.button1.Text = "Выход";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,10 +51,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(11, 261);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(15, 321);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 40);
+            this.button2.Size = new System.Drawing.Size(167, 49);
             this.button2.TabIndex = 1;
             this.button2.Text = "Обновить программу";
             this.button2.UseVisualStyleBackColor = true;
@@ -63,68 +63,62 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(28, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 13);
+            this.label1.Size = new System.Drawing.Size(197, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Текущая версия программы:";
             // 
             // lbInfaVersion
             // 
             this.lbInfaVersion.AutoSize = true;
-            this.lbInfaVersion.Location = new System.Drawing.Point(195, 35);
-            this.lbInfaVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbInfaVersion.Location = new System.Drawing.Point(260, 43);
             this.lbInfaVersion.Name = "lbInfaVersion";
-            this.lbInfaVersion.Size = new System.Drawing.Size(39, 13);
+            this.lbInfaVersion.Size = new System.Drawing.Size(51, 17);
             this.lbInfaVersion.TabIndex = 3;
             this.lbInfaVersion.Text = "Vesion";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 87);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(31, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Состояние:";
             // 
             // lbIshowUpdate
             // 
             this.lbIshowUpdate.AutoSize = true;
-            this.lbIshowUpdate.Location = new System.Drawing.Point(195, 87);
-            this.lbIshowUpdate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbIshowUpdate.Location = new System.Drawing.Point(260, 107);
             this.lbIshowUpdate.Name = "lbIshowUpdate";
-            this.lbIshowUpdate.Size = new System.Drawing.Size(138, 13);
+            this.lbIshowUpdate.Size = new System.Drawing.Size(71, 17);
             this.lbIshowUpdate.TabIndex = 5;
-            this.lbIshowUpdate.Text = "Обновление не требуется";
+            this.lbIshowUpdate.Text = "Работает";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 63);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(31, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 13);
+            this.label4.Size = new System.Drawing.Size(170, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Текущая версия сборки:";
             // 
             // lbAssemblyApp
             // 
             this.lbAssemblyApp.AutoSize = true;
-            this.lbAssemblyApp.Location = new System.Drawing.Point(197, 71);
-            this.lbAssemblyApp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAssemblyApp.Location = new System.Drawing.Point(263, 87);
             this.lbAssemblyApp.Name = "lbAssemblyApp";
-            this.lbAssemblyApp.Size = new System.Drawing.Size(44, 13);
+            this.lbAssemblyApp.Size = new System.Drawing.Size(56, 17);
             this.lbAssemblyApp.TabIndex = 7;
             this.lbAssemblyApp.Text = "Сборка";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 310);
+            this.ClientSize = new System.Drawing.Size(469, 382);
             this.Controls.Add(this.lbAssemblyApp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbIshowUpdate);
@@ -133,7 +127,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Tестовая программа такснет";
             this.Load += new System.EventHandler(this.Form1_Load);
