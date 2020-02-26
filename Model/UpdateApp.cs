@@ -54,11 +54,6 @@ namespace WP_testTask.Model
         }
 
 
-        public void StartUpdaeApp()
-        {
-            
-        }
-
         /// <summary>
         /// Удаление собственного экзешника
         /// </summary>
@@ -68,14 +63,29 @@ namespace WP_testTask.Model
             string extractPath = absolitPath + @"\new\WP_testTask.exe";
             string finalPath = absolitPath +"\\"+ @"WP_testTask.exe";
             string path = Application.ExecutablePath;
-            string command = $"/k copy {extractPath} {absolitPath}";
+            string command = $"/C copy {extractPath} {absolitPath}";
+          //  string command = $"/k copy {extractPath} {absolitPath}";
 
             try
             {
-              Process.Start("cmd.exe", "/c del \"" + path + "\"");  //Удаление рабочего, текущего exe
+              Process.Start("cmd.exe", "/C del \"" + path + "\"");  //Удаление рабочего, текущего exe
               Thread.Sleep(100);
               Process.Start("cmd.exe", command);  //Копирование файла из папки new
-              Process.Start("cmd.exe", "/C \"" + path + "\"");  //Запуск обнолвенной версии
+
+
+               // System.Diagnostics.Process proc = new System.Diagnostics.Process();
+               // proc.StartInfo.FileName = path;
+               // proc.StartInfo.RedirectStandardError = false;
+               // proc.StartInfo.RedirectStandardOutput = false;
+               // proc.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+               //// proc.StartInfo.WorkingDirectory = @"C:\0TeklaBatchProcess\1-SCAD_Issue_Processing\DXF";
+               //// proc.StartInfo.Arguments = @"-cfg tekla_dstv2dxf_metric.def -m batch -f *.nc1";
+               // proc.Start();
+               //// proc.WaitForExit();
+
+               // Process.Start("cmd.exe", "/k \"" + path + "\"");  //Запуск обнолвенной версии
+               // Process.Start("cmd.exe", "start /R:Hidden \"" + path + "\"");  //Запуск обнолвенной версии
+                Process.Start("cmd.exe", " /k \"" + path + "\"");  //Запуск обнолвенной версии
 
             }
             catch (Exception ex)
@@ -88,7 +98,7 @@ namespace WP_testTask.Model
             Process.GetCurrentProcess().Kill(); // закрытие текущего приложения
         }
 
-
+        //тестовые методы
         public void voidTestMedod()
         {
             string absolitPath = Application.StartupPath;
